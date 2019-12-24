@@ -43,3 +43,7 @@
         - DATA_FOLDER (L.26)
         - EXP_FOLDER (L.28)
         - parameters of vis.py (L.40-55)
+## To run:
+1. from deeplav3plus/deeplab/datasets:
+    - sh convert.sh
+2.
