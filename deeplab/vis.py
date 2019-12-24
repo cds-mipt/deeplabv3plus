@@ -32,7 +32,6 @@ from deeplab import common
 from deeplab import model
 from deeplab.datasets import data_generator
 from deeplab.utils import save_annotation
-import time 
 
 flags = tf.app.flags
 
@@ -154,17 +153,12 @@ def _process_batch(sess, original_images, semantic_predictions, image_names,
     raw_save_dir: The directory where the raw predictions will be saved.
     train_id_to_eval_id: A list mapping from train id to eval id.
   """
-  start_time = time.time()
   (original_images,
    semantic_predictions,
    image_names,
    image_heights,
    image_widths) = sess.run([original_images, semantic_predictions,
                              image_names, image_heights, image_widths])
-  duration = time.time() - start_time
-  print('#################################################################')
-  print(duration)
-  print('#################################################################')
   num_image = semantic_predictions.shape[0]
   for i in range(num_image):
     image_height = np.squeeze(image_heights[i])
