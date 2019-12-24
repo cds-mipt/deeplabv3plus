@@ -1,6 +1,6 @@
 # Deeplabv3+
 1. To clone directory:
-    git clone 
+    git clone https://github.com/cds-mipt/deeplabv3plus.git
 
 2. in deeplabv3+/deeplab/datasets according to examples:
     1. ./classes_palette.py: 
