@@ -1,4 +1,12 @@
 # Deeplabv3+
+## Packages:
+```
+tf.__version__ =  1.13.1
+numpy.__version__ =  1.17.4
+PIL.__version__   =  6.2.1
+```
+## Steps:
+
 1. To clone directory:
     git clone https://github.com/cds-mipt/deeplabv3plus.git
 
