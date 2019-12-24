@@ -19,6 +19,7 @@ sh convert.sh
 ```
 
 4. To run train, evaluate and visualize prediction using the model, use the following commands by running from `deeplav3plus/deeplab/main`:
+
 **Train**:
 ```
 sh train.sh 
