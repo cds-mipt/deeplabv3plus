@@ -144,10 +144,7 @@ def get_label_weight_mask(labels, ignore_label, num_classes, label_weights=1.0):
     return not_ignore_mask * label_weights
 
   label_weights = tf.constant(label_weights, tf.float32)
-  #weight_mask = tf.einsum('...y,y->...',
-                          #tf.one_hot(labels, num_classes, dtype=tf.float32),
-                          #label_weights)
-  weight_mask = tf.einsum('xy,y->x',
+  weight_mask = tf.einsum('...y,y->...',
                           tf.one_hot(labels, num_classes, dtype=tf.float32),
                           label_weights)
   return tf.multiply(not_ignore_mask, weight_mask)
