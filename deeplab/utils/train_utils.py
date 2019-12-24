@@ -122,11 +122,9 @@ def add_softmax_cross_entropy_loss_for_each_scale(scales_to_logits,
     loss_weight_.append(20) #6 solid
     loss_weight_.append(20) #7 stop_lane
     loss_weight_.append(25) #8 traffic_light
-    #loss_weight_.append(15) #truck?
     loss_weight_.append(5) #9 borders
     loss_weight_.append(5) #10 road
     loss_weight_.append(5) #11 sky
-    
     
     weights = utils.get_label_weight_mask(
         scaled_labels, ignore_label, num_classes, label_weights=loss_weight_)
