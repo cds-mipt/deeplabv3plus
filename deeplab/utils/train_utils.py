@@ -110,26 +110,8 @@ def add_softmax_cross_entropy_loss_for_each_scale(scales_to_logits,
 
     scaled_labels = tf.reshape(scaled_labels, shape=[-1])
     
-    ##################LOSS WEIGHTS#################################
-    #for Winter city dataset
-    loss_weight_ = []
-    loss_weight_.append(1) #0 background
-    loss_weight_.append(15) #1 traffic_sign
-    loss_weight_.append(20) #2 car
-    loss_weight_.append(20) #3 double_solid
-    loss_weight_.append(30) #4 intermittent
-    loss_weight_.append(20) #5 person
-    loss_weight_.append(20) #6 solid
-    loss_weight_.append(20) #7 stop_lane
-    loss_weight_.append(25) #8 traffic_light
-    loss_weight_.append(5) #9 borders
-    loss_weight_.append(5) #10 road
-    loss_weight_.append(5) #11 sky
-    
     weights = utils.get_label_weight_mask(
-        scaled_labels, ignore_label, num_classes, label_weights=loss_weight_)
-
-    ##################LOSS WEIGHTS#################################
+        scaled_labels, ignore_label, num_classes, label_weights=loss_weight)
     
     
     # Dimension of keep_mask is equal to the total number of pixels.
