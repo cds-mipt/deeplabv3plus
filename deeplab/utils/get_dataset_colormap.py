@@ -48,7 +48,7 @@ _DATASET_MAX_ENTRIES = {
     _CITYSCAPES: 256,
     _MAPILLARY_VISTAS: 66,
     _PASCAL: 512,
-    _WINTER_CITY: 13,
+    _WINTER_CITY: 12,
 }
 
 def create_winter_city_label_colormap():
