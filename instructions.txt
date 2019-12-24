@@ -2,7 +2,7 @@
     git clone https://github.com/cds-mipt/deeplabv3plus.git
 
 2. To change 
-in deeplabv3+/deeplab/datasets according to examples:
+2.1 in deeplabv3+/deeplab/datasets according to examples:
     1. ./classes_palette.py: 
         - CLASSES, PALETTE 
         
@@ -15,7 +15,7 @@ in deeplabv3+/deeplab/datasets according to examples:
         - name of dataset (L.116)
         - label (L.296-300) # don't change if there are test masks
         
-3. in deeplabv3+/deeplab/utils:
+2.2 in deeplabv3+/deeplab/utils:
     1. ./get_dataset_colormap.py:
         - name of dataset (L.43)
         - number of classes (L.51)
@@ -23,14 +23,7 @@ in deeplabv3+/deeplab/datasets according to examples:
         - get_winter_city_name() (L.76-77)
         - case for your dataset (L.412-413)
         
-    2. ./train_utils.py:
-        - L.113-133
-        
-4. deeplabv3+/deeplab/core:
-    1. ./utils.py:
-        - L.147-152
-        
-5. in deeplabv3+/deeplab/main:
+2.4 in deeplabv3+/deeplab/main:
     1. ./train.sh:
         - DATA_FOLDER (L.26)
         - EXP_FOLDER (L.28)
