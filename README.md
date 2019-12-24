@@ -1,5 +1,5 @@
-# Deeplabv3+ 
-## https://github.com/tensorflow/models/tree/master/research/deeplab
+# Semantic Segmentation on the Mapillary Vistas Dataset using the [DeepLabv3+](https://github.com/tensorflow/models/tree/master/research/deeplab) [4] model by Google TensorFlow
+
 ### Packages:
 ```
 tf.__version__ =  1.13.1
