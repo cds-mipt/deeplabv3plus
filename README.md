@@ -1,5 +1,6 @@
 # Deeplabv3+
-1. To clone directory
+1. To clone directory:
+    git clone 
 
 2. in deeplabv3+/deeplab/datasets according to examples:
     1. ./classes_palette.py: 
