@@ -17,8 +17,9 @@ git clone https://github.com/cds-mipt/deeplabv3plus.git
 ```
 sh convert.sh
 ```
+4. The initial model checkpoints are available [in the TensorFlow DeepLab Model Zoo ](https://github.com/tensorflow/models/blob/master/research/deeplab/g3doc/model_zoo.md). Please put the ones you wish to use in `/deeplabv3plus/deeplab/datasets/init_models/`.
 
-4. To run train, evaluate and visualize prediction using the model, use the following commands by running from `deeplav3plus/deeplab/main`:
+5. To run train, evaluate and visualize prediction using the model, use the following commands by running from `deeplav3plus/deeplab/main`:
 
 **Train**:
 ```
