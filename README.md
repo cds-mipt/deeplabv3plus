@@ -2,6 +2,7 @@
 
 ### Libraries:
 ```
+python --version = 3.6.9
 tf.__version__ =  1.13.1
 numpy.__version__ =  1.17.4
 PIL.__version__   =  6.2.1
