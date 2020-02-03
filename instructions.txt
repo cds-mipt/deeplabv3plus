@@ -8,7 +8,7 @@
         
     2. ./convert.sh
         - WORK_DIR (L.11)
-        - image_fromat (L.40)
+        - image_format (L.40)
         
     3. ./data_generator.py:
         - _WINTER_CITY_INFORMATION (L.102-110) 
