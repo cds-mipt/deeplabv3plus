@@ -7,10 +7,6 @@ from tqdm import tqdm
 from classes_palette import PALETTE
 from print_utils import print_info_message, print_error_message
 
-import os
-os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"   
-os.environ["CUDA_VISIBLE_DEVICES"]="2,3"
-
 def convert_from_color_segmentation(arr_3d):
     height = arr_3d.shape[0]
     width = arr_3d.shape[1]
@@ -33,7 +29,7 @@ def convert_mask(label_dir, save_dir):
         save_dir: directory for converted masks.
         palette: mapping "color to number of class". Example:
             palette[(0, 0, 0)] = 0 #backgound
-            palette[((0, 0, 255)] = 2 #car and etc.
+            palette[((0, 0, 255)] = 1 #car and etc.
     
     '''
     
@@ -47,7 +43,7 @@ def convert_mask(label_dir, save_dir):
 
     for l_f in tqdm(label_files):
         path = os.path.join(label_dir, l_f)
-        arr = np.array(Image.open(path))
+        arr = np.array(Image.open(path).convert('RGB'))
         
         arr = arr[:,:,0:3]
         arr_2d = convert_from_color_segmentation(arr)
